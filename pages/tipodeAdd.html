@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O Que Você Curte Assistir?</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --red:#7a0000;
+  --red2:#4d0000;
+  --black:#000000;
+  --black2:#080808;
+  --line:#1a1a1a;
+  --white:#f1f1f1;
+  --gray:#888;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top left, rgba(122,0,0,.08), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(122,0,0,.06), transparent 30%),
+    #000;
+  color:var(--white);
+  font-family:'Rajdhani',sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:30px;
+}
+
+/* área principal sem card separado */
+.container{
+  width:100%;
+  max-width:620px;
+}
+
+.header{
+  margin-bottom:30px;
+}
+
+.eyebrow{
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--gray);
+  margin-bottom:10px;
+}
+
+h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:58px;
+  line-height:0.95;
+  letter-spacing:1px;
+}
+
+h1 span{
+  color:var(--red);
+}
+
+.subtitle{
+  margin-top:10px;
+  color:var(--gray);
+  font-size:15px;
+}
+
+/* opções */
+.options{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:26px;
+}
+
+.option input{
+  display:none;
+}
+
+.option label{
+  display:block;
+  padding:18px 20px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.015);
+  cursor:pointer;
+  transition:.2s;
+}
+
+.option label:hover{
+  border-color:#333;
+  background:rgba(255,255,255,.03);
+}
+
+.option input:checked + label{
+  border-color:var(--red);
+  background:rgba(122,0,0,.12);
+}
+
+.option-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:26px;
+  letter-spacing:1px;
+}
+
+.option-sub{
+  color:var(--gray);
+  font-size:13px;
+}
+
+/* botão */
+button{
+  width:100%;
+  padding:16px;
+  border:none;
+  background:var(--red2);
+  color:#fff;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:24px;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+button:hover{
+  background:var(--red);
+}
+
+/* tela sucesso */
+.success{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:#000;
+  z-index:10;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+}
+
+.success.show{
+  display:flex;
+}
+
+.success-box{
+  max-width:420px;
+}
+
+.success-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:54px;
+}
+
+.success-title span{
+  color:var(--red);
+}
+
+.success-msg{
+  margin:14px 0 24px;
+  color:#aaa;
+  font-size:16px;
+}
+
+@media(max-width:600px){
+  h1{font-size:44px;}
+  .option-title{font-size:22px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="eyebrow">antes de começarmos</div>
+    <h1>O Que Você de Assistir?</h1>
+    <p class="subtitle">Escolha uma opção abaixo.</p>
+  </div>
+
+  <form id="form" onsubmit="handleSubmit(event)">
+    
+    <div class="options">
+
+      <div class="option">
+        <input type="radio" name="escolha" id="starwars" value="Star Wars" required>
+        <label for="starwars">
+          <div class="option-title">Star Wars</div>
+          <div class="option-sub">Jedi, Sith e a galáxia</div>
+        </label>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="escolha" id="velozes" value="Velozes e Furiosos">
+        <label for="velozes">
+          <div class="option-title">Velozes e Furiosos</div>
+          <div class="option-sub">Carros, velocidade e ação</div>
+        </label>
+      </div>
+
+      <div class="option">
+        <input type="radio" name="escolha" id="mj" value="Michael Jackson">
+        <label for="mj">
+          <div class="option-title">Michael Jackson</div>
+          <div class="option-sub">O rei do pop</div>
+        </label>
+      </div>
+
+    </div>
+
+    <button type="submit" onclick="continuarEscolha()">CONFIRMAR ESCOLHA</button>
+  </form>
+</div>
+<script src="../js/add.js"></script>
+
+</body>
+</html>
