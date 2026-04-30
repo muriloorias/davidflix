@@ -1,0 +1,171 @@
+:root {
+        --red: #7a0000;
+        --red2: #4d0000;
+        --black: #000000;
+        --black2: #080808;
+        --line: #1a1a1a;
+        --white: #f1f1f1;
+        --gray: #888;
+}
+
+* {
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+}
+
+body {
+        min-height: 100vh;
+        background:
+                radial-gradient(circle at top left, rgba(122, 0, 0, .08), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(122, 0, 0, .06), transparent 30%),
+                #000;
+        color: var(--white);
+        font-family: 'Rajdhani', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+}
+
+/* área principal sem card separado */
+.container {
+        width: 100%;
+        max-width: 620px;
+}
+
+.header {
+        margin-bottom: 30px;
+}
+
+.eyebrow {
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gray);
+        margin-bottom: 10px;
+}
+
+h1 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 58px;
+        line-height: 0.95;
+        letter-spacing: 1px;
+}
+
+h1 span {
+        color: var(--red);
+}
+
+.subtitle {
+        margin-top: 10px;
+        color: var(--gray);
+        font-size: 15px;
+}
+
+/* opções */
+.options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 26px;
+}
+
+.option input {
+        display: none;
+}
+
+.option label {
+        display: block;
+        padding: 18px 20px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, .015);
+        cursor: pointer;
+        transition: .2s;
+}
+
+.option label:hover {
+        border-color: #333;
+        background: rgba(255, 255, 255, .03);
+}
+
+.option input:checked+label {
+        border-color: var(--red);
+        background: rgba(122, 0, 0, .12);
+}
+
+.option-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 26px;
+        letter-spacing: 1px;
+}
+
+.option-sub {
+        color: var(--gray);
+        font-size: 13px;
+}
+
+/* botão */
+button {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        background: var(--red2);
+        color: #fff;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 24px;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: .2s;
+}
+
+button:hover {
+        background: var(--red);
+}
+
+/* tela sucesso */
+.success {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: #000;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+}
+
+.success.show {
+        display: flex;
+}
+
+.success-box {
+        max-width: 420px;
+}
+
+.success-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 54px;
+}
+
+.success-title span {
+        color: var(--red);
+}
+
+.success-msg {
+        margin: 14px 0 24px;
+        color: #aaa;
+        font-size: 16px;
+}
+
+@media(max-width:600px) {
+        h1 {
+                font-size: 44px;
+        }
+
+        .option-title {
+                font-size: 22px;
+        }
+}

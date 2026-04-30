@@ -28,6 +28,5 @@ function continuarEscolha() {
   localStorage.setItem("velozesSelecionado", velozesSelecionado);
   localStorage.setItem("michaelJacksonSelecionado", michaelJacksonSelecionado);
 
-  // redireciona da pagina tipodeAdd.html para home.html
-  window.location.href = "home.html";
+  window.location.href = "../pages/home.html";
 }
