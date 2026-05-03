@@ -116,3 +116,39 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+.ad-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.ad-content h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.ad-content p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.ad-btn {
+  margin-top: 8px;
+  padding: 10px 24px;
+  background: #e50914;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.ad-btn:hover {
+  background: #b20710;
+}

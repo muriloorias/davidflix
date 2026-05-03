@@ -6,7 +6,7 @@
 <title>O Que Você Curte Assistir?</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles/addType.css">
+<link rel="stylesheet" href="../styles/tipoDeeAdd.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <p class="subtitle">Escolha uma opção abaixo.</p>
   </div>
 
-  <form id="form" onsubmit="event.preventDefault(); continuarEscolha();">
+  <form id="form" onsubmit="handleSubmit(event)">
     
     <div class="options">
 
@@ -49,7 +49,7 @@
 
     </div>
 
-    <button type="submit" onclick="continuarEscolha()">CONFIRMAR ESCOLHA</button>
+    <button type="button" onclick="continuarEscolha()">CONFIRMAR ESCOLHA</button>
   </form>
 </div>
 <script src="../js/add.js"></script>
