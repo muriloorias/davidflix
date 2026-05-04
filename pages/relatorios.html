@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Relatório em Tempo Real</title>
+    <link rel="stylesheet" href="../styles/relatorio.css">
 </head>
 <body>
+    <div class="header">
+        <div class="timer-container">
+            <span class="timer-label">Atualização em:</span>
+            <span id="timer">30</span>
+            <span class="seconds">s</span>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="report-card">
+            <h1 class="report-title">📊 Relatório em Tempo Real</h1>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-label">👥 Pessoas Online Agora</div>
+                    <div id="online-count" class="online-count">347</div>
+                    <div class="trend">▲ aumentando</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-label">⭐ Avaliação Média</div>
+                    <div id="rating" class="rating">4.7</div>
+                    <div id="stars" class="stars">★★★★☆</div>
+                </div>
+            </div>
+
+            <div class="update-info">
+                Última atualização: <span id="last-update">agora</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Simulação de dados ao vivo • Timer reinicia a cada 30 segundos
+    </div>
+
     <script src="../js/relatorio.js"></script>
 </body>
 </html>
